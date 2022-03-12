@@ -1,0 +1,56 @@
+{
+    "name": "@faustbrian/uwu",
+    "version": "1.0.0",
+    "description": "lukeed/uvu on steroids",
+    "homepage": "https://github.com/faustbrian/uwu",
+    "bugs": {
+        "url": "https://github.com/faustbrian/uwu/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/faustbrian/uwu.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Brian Faust",
+        "email": "hello@basecode.sh",
+        "url": "https://basecode.sh"
+    },
+    "main": "./dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "del distribution && tsc",
+        "lint": "deno fmt source",
+        "prepublishOnly": "pnpm run build",
+        "test": "uvu -r tsm source .test.ts",
+        "test:coverage": "c8 -r html pnpm run test",
+        "test:file": "uvu -r tsm source"
+    },
+    "dependencies": {
+        "@types/node": "^17.0.21",
+        "concordance": "^5.0.4",
+        "kleur": "^4.1.4",
+        "nock": "^13.2.4",
+        "sinon": "^13.0.1",
+        "string-kit": "^0.16.1",
+        "ts-auto-mock": "^3.5.0",
+        "uvu": "^0.5.3",
+        "zod": "^3.13.4"
+    },
+    "devDependencies": {
+        "@sindresorhus/tsconfig": "^2.0.0",
+        "c8": "^7.11.0",
+        "del-cli": "^4.0.1",
+        "tsm": "^2.2.1",
+        "tsup": "^4.8.4",
+        "typescript": "^4.4.3"
+    },
+    "engines": {
+        "node": ">=16"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

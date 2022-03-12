@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+distribution
+node_modules

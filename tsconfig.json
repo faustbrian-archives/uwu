@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"assumeChangesOnlyAffectDirectDependencies": true,
+		"declaration": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": ["es2020"],
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"newLine": "lf",
+		"noEmitOnError": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"pretty": true,
+		"outDir": "distribution",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": false,
+		"stripInternal": true,
+		"target": "es2020",
+		"typeRoots": ["reflect-metadata", "node_modules/@types"],
+		"useUnknownInCatchVariables": false
+	},
+	"include": ["source/**/**.ts"],
+	"exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+}
