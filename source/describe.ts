@@ -2,6 +2,7 @@ import sinon from "sinon";
 import { Callback, Context, suite, Test } from "uvu";
 import { z as schema } from "zod";
 import { createMock } from "ts-auto-mock";
+import kleur from "kleur";
 
 import { assert } from "./assert";
 import { each, formatName } from "./each";
@@ -148,3 +149,13 @@ export const describeEach = <T = Context>(
     runSuite<T>(suite<T>(formatName(title, dataset)), callback);
   }
 };
+
+export const describeSkip = <T = Context>(
+  title: string,
+  callback: CallbackFunction<T>,
+) =>
+  console.log(
+    `${kleur.bold(kleur.bgYellow(kleur.black("Ignored test suite")))}: ${
+      kleur.yellow(title)
+    }`,
+  );
